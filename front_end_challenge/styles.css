@@ -109,11 +109,17 @@ div.profile ul {
 }
 div.profile p {
     margin: 0px;
+    font-size: 1rem;
     display: inline;
+}
+.columns {
+    font-size: 0px;
 }
 .columns div {
     display: inline-block;
-    width: 49.5%;
+    box-sizing: border-box;
+    width: 50%;
+    padding: 5px;
 }
 @media (max-width: 500px) {
     .columns div {
