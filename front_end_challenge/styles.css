@@ -68,7 +68,7 @@ nav a:hover {
         transform: translate(0px, 0px);
         display: none;
     }
-    nav:active ul {
+    nav ul.selected {
         display: block;
     }
 }

@@ -1,16 +1,16 @@
 <html id="home">
     <head>
         <link rel="stylesheet" href="styles.css" />
-        <nav>
+        <nav id="navBar" onclick="showNav();">
             <img id="logo" src="./assets/logo.png" />
 
-            <ul>
+            <ul id="navItems">
                 <li><a href="home.html">Home</a></li>
                 <li><a href="profile.html">Profile Page</a></li>
             </ul>
         </nav>
     </head>
-    <body> 
+    <body>
         <div id="imageContainer" class ="">
             <img id="galleryPic" src="./assets/image1.jpg" />
             <img id="galleryPic" src="./assets/image2.jpg"/>
@@ -27,6 +27,17 @@
             <img id="galleryPic" src="./assets/image13.jpg"/>
             <img id="galleryPic" src="./assets/image14.jpg"/>
             <img id="galleryPic" src="./assets/image15.jpg"/>
-         </div>
+        </div>
+        <script>
+            function showNav() {
+                document.getElementById("navItems").classList.add("selected");
+                console.log("show");
+            }
+            function hideNav() {
+                document.getElementById("navItems").classList.remove("selected");
+                console.log("hide");
+            }
+            document.body.addEventListener("click", hideNav, true);
+        </script>
     </body>
 </html>

@@ -1,9 +1,9 @@
 <html>
     <head>
         <link rel="stylesheet" href="styles.css" />
-        <nav>
+        <nav id="navBar" onclick="showNav();">
             <img id="logo" src="./assets/logo.png" />
-                <ul>
+                <ul id="navItems">
                     <li><a href="home.html">Home</a></li>
                     <li><a href="profile.html">Profile Page</a></li>
                 </ul>
@@ -50,5 +50,16 @@
                 </div>
             </div>
         </div>
+        <script>
+            function showNav() {
+                document.getElementById("navItems").classList.add("selected");
+                console.log("show");
+            }
+            function hideNav() {
+                document.getElementById("navItems").classList.remove("selected");
+                console.log("hide");
+            }
+            document.body.addEventListener("click", hideNav, true);
+        </script>
     </body>
 </html>
