@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Find a Prime</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="prime.js"></script>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        let x = params.get("number");
+
+        if (x == null || isNaN(x) || x == "") {
+            // Set default
+            x = "2";
+        } else if (parseInt(x).toString() != x) {
+            // convert exponential formats
+            x = Math.floor(parseFloat(x)).toString();
+            if (parseInt(x).toString() != x) {
+                // number too large to convert TODO handle this error with communication
+                x = "2";
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label for="number">Enter a number:</label><br>
+        <input type="number" id="number" name="number"><br>
+        <input type="submit" value="Is Prime?">
+    </form>
+
+    <p id="output"></p>
+
+    <script>
+        document.getElementById("number").value = x;
+        let p = document.getElementById("output");
+        if (isPrime(parseInt(x))) {
+            p.innerHTML = x + " <b>is</b> prime";
+        } else {
+            p.innerHTML = x + " <b>is not</b> prime";
+        }
+    </script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Architecture Challenge</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Architecture Challenge</h1>
+</header>
+<p>Consider a fictional application that allows the user to translate source text organized by book, chapter, and verse. This application must load source text in the USFM markup format, present a user interface for translating the content, then save the translated text to the user’s storage.</p><p>Here is an example of some source text in USFM markup format that provides a book, a chapter, and four verses:</p><pre class="usfm"><code>\id PHP Unlocked Literal Bible
+\h Philippians
+\c 4
+\p
+\v 4 Rejoice in the Lord always. Again I will say, rejoice. \v 5 Let your gentleness be known to all people. The Lord is near.
+\v 6 Do not be anxious about anything. Instead, in everything by prayer and petition with thanksgiving, let your requests be known to God, \v 7 and the peace of God, which surpasses all understanding, will guard your hearts and your thoughts in Christ Jesus.</code></pre><p>📌 <strong>You don’t need to learn USFM for this challenge!</strong> It’s just an example of a domain markup language.</p><p>Give some thought as to how you would design this application, then please provide answers to the following questions:</p><ol type="1"><li><p>How would you go about parsing the source text? For example, how would you approach finding verse markers, the verse numbers, and the verse text? Note that multiple verses can appear on the same line. Please provide a description of your approach, or some <a href="https://en.wikipedia.org/wiki/Pseudocode">pseudocode</a>.</p></li><li><p>How would you represent this data within your app? Please provide a diagram or pseudocode that shows your data structure and relationships.</p></li><li><p>What might the user interface look like? Assume that the user does not merely want a text editor, but a program that assists them in translating Scripture. What actions might the user perform in the UI?</p></li><li><p>Suppose a new feature was introduced to USFM – a new markup pair <code>\r</code> and <code>\r*</code> that can be placed around text to be displayed in red letters. The red letters might be inside a verse, or it might span verses. How would you need to modify your design and user interface to accommodate this new feature?</p></li></ol>
+</body>
+</html>
